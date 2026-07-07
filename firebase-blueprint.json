@@ -1,0 +1,116 @@
+{
+  "entities": {
+    "Project": {
+      "title": "Project",
+      "description": "Represents a user-created filmmaking project.",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "description": "Unique project identifier" },
+        "title": { "type": "string", "description": "The title of the project" },
+        "description": { "type": "string", "description": "Short project summary" },
+        "status": { "type": "string", "enum": ["scripting", "pre-production", "storyboard", "editing", "released"] },
+        "thumbnail_url": { "type": "string", "description": "Project thumbnail image fallback URL" },
+        "created_at": { "type": "string", "format": "date-time" },
+        "updated_at": { "type": "string", "format": "date-time" },
+        "user_id": { "type": "string", "description": "User identifier who owns this project" }
+      },
+      "required": ["title", "user_id"]
+    },
+    "Script": {
+      "title": "Script",
+      "description": "Represents the dynamic screenplay content of a project.",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "project_id": { "type": "string" },
+        "content": { "type": "string" },
+        "last_ai_suggestion": { "type": "string" },
+        "updated_at": { "type": "string", "format": "date-time" }
+      },
+      "required": ["project_id"]
+    },
+    "Shot": {
+      "title": "Shot",
+      "description": "A single storyboard shot within a project.",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "project_id": { "type": "string" },
+        "shot_code": { "type": "string" },
+        "scene_number": { "type": "string" },
+        "shot_type": { "type": "string" },
+        "angle": { "type": "string" },
+        "movement": { "type": "string" },
+        "camera_angle": { "type": "string" },
+        "lens": { "type": "string" },
+        "motion_intensity": { "type": "number" },
+        "duration": { "type": "string" },
+        "description": { "type": "string" },
+        "prompt": { "type": "string" },
+        "sort_order": { "type": "number" },
+        "is_completed": { "type": "boolean" },
+        "thumbnail_url": { "type": "string" },
+        "video_url": { "type": "string" },
+        "created_at": { "type": "string", "format": "date-time" },
+        "updated_at": { "type": "string", "format": "date-time" }
+      },
+      "required": ["project_id", "shot_code", "description"]
+    },
+    "Profile": {
+      "title": "Profile",
+      "description": "User-specific profile fields.",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "display_name": { "type": "string" },
+        "avatar_url": { "type": "string" },
+        "bio": { "type": "string" },
+        "free_fest_used": { "type": "boolean" },
+        "tokens": { "type": "number", "description": "User token balance" },
+        "created_at": { "type": "string", "format": "date-time" },
+        "updated_at": { "type": "string", "format": "date-time" }
+      }
+    },
+    "Character": {
+      "title": "Character",
+      "description": "Represents a character profile in the Character Bible.",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "description": "Unique character identifier" },
+        "user_id": { "type": "string", "description": "User identifier who owns this character" },
+        "project_id": { "type": "string", "description": "Optional associated project identifier" },
+        "name": { "type": "string", "description": "Character name" },
+        "role": { "type": "string", "description": "Character's role in the story (e.g. Protagonist, Antagonist, etc.)" },
+        "visual_description": { "type": "string", "description": "Visual description of character traits, attire, etc." },
+        "personality": { "type": "string", "description": "Personality traits" },
+        "backstory": { "type": "string", "description": "Character background/backstory" },
+        "avatar_url": { "type": "string", "description": "AI-generated or uploaded avatar image URL" },
+        "created_at": { "type": "string", "format": "date-time" },
+        "updated_at": { "type": "string", "format": "date-time" }
+      },
+      "required": ["name", "user_id"]
+    }
+  },
+  "firestore": {
+    "/projects/{projectId}": {
+      "schema": "Project",
+      "description": "Collection of projects scoped under individual owners."
+    },
+    "/scripts/{scriptId}": {
+      "schema": "Script",
+      "description": "Screenplays mapping 1-to-1 to each project."
+    },
+    "/shots/{shotId}": {
+      "schema": "Shot",
+      "description": "Individual project storyboard frames."
+    },
+    "/profiles/{userId}": {
+      "schema": "Profile",
+      "description": "User profiles identifying makers by display name."
+    },
+    "/characters/{characterId}": {
+      "schema": "Character",
+      "description": "Centralized character profiles belonging to users."
+    }
+  }
+}

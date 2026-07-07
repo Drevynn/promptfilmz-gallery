@@ -1,0 +1,39 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Helper functions
+    function isSignedIn() {
+      return request.auth != null;
+    }
+    
+    function isOwner(userId) {
+      return isSignedIn() && request.auth.uid == userId;
+    }
+
+    match /projects/{projectId} {
+      allow read, write: if isSignedIn() && (resource == null || resource.data.user_id == request.auth.uid);
+    }
+
+    match /scripts/{scriptId} {
+      allow read, write: if isSignedIn();
+    }
+
+    match /shots/{shotId} {
+      allow read, write: if isSignedIn();
+    }
+
+    match /profiles/{userId} {
+      allow read: if isSignedIn();
+      allow write: if isOwner(userId);
+    }
+
+    match /characters/{characterId} {
+      allow read, write: if isSignedIn() && (resource == null || resource.data.user_id == request.auth.uid);
+    }
+
+    // Default catch-all for remaining collections
+    match /{document=**} {
+      allow read, write: if isSignedIn();
+    }
+  }
+}

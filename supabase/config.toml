@@ -1,0 +1,19 @@
+project_id = "broeyaqgxkaqfjxjgrnw"
+
+[functions]
+  [functions.auth-email-hook]
+    verify_jwt = false
+  [functions.helpdesk]
+    verify_jwt = false
+  [functions.process-email-queue]
+    verify_jwt = false
+  [functions.script-assist]
+    verify_jwt = false
+  [functions.storyboard-assist]
+    verify_jwt = false
+  [functions.storyboard-image]
+    verify_jwt = false
+  [functions.elevenlabs-music]
+    verify_jwt = false
+  [functions.luma-video]
+    verify_jwt = false
