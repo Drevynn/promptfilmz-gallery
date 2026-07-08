@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useNavigate, useSearchParams } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import { Plus, Play, Pause, Clock, Film, Music, FileText, TrendingUp, Trash2, LogOut, Download, X, Zap, ChevronDown, Video, Move, Maximize2 } from "lucide-react";
+import { Bug, Plus, Play, Pause, Clock, Film, Music, FileText, TrendingUp, Trash2, LogOut, Download, X, Zap, ChevronDown, Video, Move, Maximize2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -18,6 +18,7 @@ import ShotListTracker from "@/components/production/ShotListTracker";
 import VeoVideoEngine, { GeneratedClip } from "@/components/production/VeoVideoEngine";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import UsageTracker from "@/components/production/UsageTracker";
+import { BugReportDialog } from "@/components/BugReportDialog";
 
 const stats = [
   { label: "Active Projects", value: "–", icon: Film, change: "" },
@@ -69,6 +70,7 @@ const Dashboard = () => {
     }
   }, []);
   const [dialogOpen, setDialogOpen] = useState(false);
+  const [bugDialogOpen, setBugDialogOpen] = useState(false);
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
 
@@ -541,6 +543,17 @@ const Dashboard = () => {
             )}
           </AnimatePresence>
         </motion.div>
+        {/* Floating Bug Report Button */}
+        <Button 
+          variant="secondary" 
+          size="sm" 
+          className="fixed bottom-6 right-6 z-50 rounded-full shadow-lg" 
+          onClick={() => setBugDialogOpen(true)}
+        >
+          <Bug className="w-4 h-4 mr-2" />
+          Report a Bug
+        </Button>
+        <BugReportDialog open={bugDialogOpen} onOpenChange={setBugDialogOpen} />
       </div>
     </AppLayout>
   );
