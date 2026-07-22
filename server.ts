@@ -42,6 +42,22 @@ async function startServer() {
   app.use(express.json());
   const PORT = 3000;
 
+  // Health check endpoint for Cloud Run and proxies
+  app.get("/api/health", (req, res) => {
+    res.json({ status: "ok" });
+  });
+
+  // Favicon route handler
+  app.get("/favicon.ico", (req, res) => {
+    const faviconPath = path.join(process.cwd(), 'public', 'favicon.ico');
+    res.sendFile(faviconPath, (err) => {
+      if (err) {
+        // Fallback to 204 No Content if file not found rather than erroring
+        res.status(204).end();
+      }
+    });
+  });
+
   let aiClient: GoogleGenAI | null = null;
   function getAI() {
     if (!aiClient) {
