@@ -3,13 +3,15 @@ import path from "path";
 import { createServer as createViteServer } from "vite";
 import { GoogleGenAI, ThinkingLevel, Modality } from "@google/genai";
 import cors from "cors";
-import * as admin from 'firebase-admin';
+import admin from 'firebase-admin';
 
 async function startServer() {
   let db: admin.firestore.Firestore | null = null;
   try {
-    if (!admin.apps.length) {
-      admin.initializeApp();
+    const activeApps = admin.apps || (admin as any).default?.apps || [];
+    if (!activeApps.length) {
+      const projectId = process.env.FIREBASE_PROJECT_ID || process.env.GCP_PROJECT || 'ai-studio-f92850f7-d0ea-4792-82fa-a3d132a570a3';
+      admin.initializeApp({ projectId });
     }
     db = admin.firestore();
   } catch (error) {
@@ -283,6 +285,15 @@ async function startServer() {
     } catch (error) {
       console.error("Avatar generation handler error:", error);
       res.status(500).json({ error: (error as Error).message });
+    }
+  });
+
+  // Handle non-API POST requests gracefully by redirecting or serving index.html
+  app.post('*all', (req, res, next) => {
+    if (req.path.startsWith('/api')) {
+      res.status(404).json({ error: "API endpoint not found" });
+    } else {
+      res.redirect(303, req.path || '/');
     }
   });
 
