@@ -5,7 +5,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { toast } from "sonner";
+import { useToast } from "@/hooks/use-toast";
 import { db, auth } from "@/lib/firebase";
 import { collection, addDoc, serverTimestamp } from "firebase/firestore";
 import { Bug } from "lucide-react";
@@ -19,6 +19,7 @@ export function BugReportDialog({ open, onOpenChange }: BugReportDialogProps) {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [loading, setLoading] = useState(false);
+  const { toast } = useToast();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -33,13 +34,20 @@ export function BugReportDialog({ open, onOpenChange }: BugReportDialogProps) {
         reportedAt: serverTimestamp(),
         status: "open"
       });
-      toast.success("Bug report submitted successfully!");
+      toast({
+        title: "Success",
+        description: "Bug report submitted successfully!",
+      });
       setTitle("");
       setDescription("");
       onOpenChange(false);
     } catch (error) {
       console.error("Error submitting bug report:", error);
-      toast.error("Failed to submit bug report. Please try again.");
+      toast({
+        variant: "destructive",
+        title: "Error",
+        description: "Failed to submit bug report. Please try again.",
+      });
     } finally {
       setLoading(false);
     }

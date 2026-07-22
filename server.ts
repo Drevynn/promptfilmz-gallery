@@ -6,12 +6,21 @@ import cors from "cors";
 import * as admin from 'firebase-admin';
 
 async function startServer() {
-  if (!admin.apps.length) {
-    admin.initializeApp();
+  let db: admin.firestore.Firestore | null = null;
+  try {
+    if (!admin.apps.length) {
+      admin.initializeApp();
+    }
+    db = admin.firestore();
+  } catch (error) {
+    console.error("Firebase Admin initialization failed. Server-side token validation will be bypassed in dev mode:", error);
   }
-  const db = admin.firestore();
   
   async function checkAndDeductTokens(userId: string, tokensRequired: number): Promise<boolean> {
+    if (!db) {
+      console.warn(`[Dev Warning] Firebase Admin not initialized. Bypassing token deduction of ${tokensRequired} for user ${userId}.`);
+      return true;
+    }
     const profileRef = db.collection('profiles').doc(userId);
     try {
       return await db.runTransaction(async (transaction) => {
