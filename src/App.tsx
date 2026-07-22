@@ -27,6 +27,7 @@ const ResetPassword = lazy(() => import("./pages/ResetPassword"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 const AnalyticsDocs = lazy(() => import("./pages/AnalyticsDocs"));
 const Learn = lazy(() => import("./pages/Learn"));
+const Contact = lazy(() => import("./pages/Contact"));
 const DirectorAI = lazy(() => import("./pages/DirectorAI"));
 const FestivalGallery = lazy(() => import("./pages/FestivalGallery"));
 const CheckoutSuccess = lazy(() => import("./pages/CheckoutSuccess"));
@@ -35,6 +36,7 @@ const Terms = lazy(() => import("./pages/Terms"));
 import ChatWidget from "./components/ChatWidget";
 import ScrollToTop from "./components/ScrollToTop";
 import PWAInstallBanner from "./components/PWAInstallBanner";
+import { CookieConsentBanner } from "./components/CookieConsentBanner";
 import RouteTransition from "./components/RouteTransition";
 import DeepLinkHandler from "./components/DeepLinkHandler";
 import AuthLoadingScreen from "./components/AuthLoadingScreen";
@@ -85,6 +87,8 @@ const App = () => (
                   <Route path="/settings" element={<ProtectedRoute><Settings /></ProtectedRoute>} />
                   <Route path="/analytics-docs" element={<ProtectedRoute><AnalyticsDocs /></ProtectedRoute>} />
                   <Route path="/learn" element={<Learn />} />
+                  <Route path="/wiki" element={<Learn />} />
+                  <Route path="/contact" element={<Contact />} />
                   <Route path="/director" element={<DirectorAI />} />
                   <Route path="/festival" element={<ProtectedRoute><FestivalGallery /></ProtectedRoute>} />
                   <Route path="/checkout-success" element={<ProtectedRoute><CheckoutSuccess /></ProtectedRoute>} />
@@ -97,6 +101,7 @@ const App = () => (
             <ChatWidget />
             <ScrollToTop />
             <PWAInstallBanner />
+            <CookieConsentBanner />
           </BrowserRouter>
         </TooltipProvider>
       </AuthProvider>

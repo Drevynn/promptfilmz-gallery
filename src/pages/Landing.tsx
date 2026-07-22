@@ -4,7 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Film, FileText, Music, Video, Image, ListChecks, Star, ArrowRight, Check, Sparkles, Zap, Shield, Menu, X } from "lucide-react";
 import logoImg from "@/assets/logo-circle.png";
-import heroImg from "@/assets/images/hero_image_cinematic_1782118748729.jpg";
+import heroImg from "@/assets/images/hero_chair_wrap_1784685238120.jpg";
 import { useMemo, useRef, useState } from "react";
 
 import { useSubscription, TIERS } from "@/hooks/useSubscription";
@@ -263,11 +263,13 @@ const Landing = () => {
   const heroCtaItemVariants = useMemo(() => buildHeroCtaItemVariants(reduced), [reduced]);
 
   const navLinks = [
-  { href: "#features", label: "Features" },
-  { href: "#pricing", label: "Pricing" },
-  { href: "#testimonials", label: "Testimonials" },
-  { href: "/faq", label: "FAQ", isRoute: true },
-  { href: "/help", label: "Help", isRoute: true }];
+    { href: "#features", label: "Features" },
+    { href: "#pricing", label: "Pricing" },
+    { href: "/wiki", label: "Wiki", isRoute: true },
+    { href: "/contact", label: "Contact", isRoute: true },
+    { href: "/faq", label: "FAQ", isRoute: true },
+    { href: "/help", label: "Help", isRoute: true }
+  ];
 
 
   return (
@@ -275,7 +277,10 @@ const Landing = () => {
       {/* Nav */}
       <nav className="fixed top-0 w-full z-50 border-b border-border/30 bg-background/60 backdrop-blur-2xl">
         <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-          <Link to="/" className="text-xl font-bold text-foreground">AIfilmz</Link>
+          <Link to="/" className="flex items-center gap-2 text-xl font-bold font-display text-foreground hover:opacity-90 transition-opacity">
+            <img src={logoImg} alt="That's A Wrap" className="h-8 object-contain logo-gold-ring" referrerPolicy="no-referrer" />
+            <span>That's A Wrap</span>
+          </Link>
           <div className="hidden md:flex items-center gap-8 text-sm text-muted-foreground">
             {navLinks.map((link) =>
             link.isRoute ?
@@ -405,9 +410,8 @@ const Landing = () => {
                   >
                     <motion.img
                       src={heroImg}
-                      alt=""
-                      role="presentation"
-                      aria-hidden="true"
+                      alt="Director's chair with That's a wrap gold lettering"
+                      referrerPolicy="no-referrer"
                       width={288}
                       height={288}
                       loading="eager"
@@ -622,14 +626,17 @@ const Landing = () => {
       <footer className="border-t border-border py-12 px-6">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="flex items-center gap-2">
-            <img src={logoImg} alt="AIfilmz" className="h-8 object-contain logo-gold-ring" />
+            <img src={logoImg} alt="That's A Wrap" className="h-8 object-contain logo-gold-ring" referrerPolicy="no-referrer" />
+            <span className="font-display font-semibold text-sm">That's A Wrap</span>
           </div>
           <div className="flex items-center gap-6 text-sm text-muted-foreground">
+            <Link to="/wiki" className="hover:text-foreground transition-colors">Wiki</Link>
+            <Link to="/contact" className="hover:text-foreground transition-colors">Contact</Link>
             <Link to="/faq" className="hover:text-foreground transition-colors">FAQ</Link>
             <Link to="/help" className="hover:text-foreground transition-colors">Help</Link>
             <Link to="/install" className="hover:text-foreground transition-colors text-gold-shimmer">Install App</Link>
           </div>
-          <p className="text-xs text-muted-foreground">© 2026 AIfilmz. All rights reserved.</p>
+          <p className="text-xs text-muted-foreground">© 2026 That's A Wrap. All rights reserved.</p>
         </div>
       </footer>
     </div>);

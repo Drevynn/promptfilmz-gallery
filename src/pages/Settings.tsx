@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { User, Camera, Lock, LogOut, Save, Loader2, Sun, Moon, Palette, Bell, BellOff, Send, Video, FileText, Trophy, CreditCard } from "lucide-react";
+import { User, Camera, Lock, LogOut, Save, Loader2, Sun, Moon, Palette, Bell, BellOff, Send, Video, FileText, Trophy, CreditCard, ShieldCheck } from "lucide-react";
+import { AnalyticsConsentManager } from "@/components/AnalyticsConsentManager";
 import { useTheme } from "@/hooks/useTheme";
 import { Switch } from "@/components/ui/switch";
 import { supabase } from "@/integrations/supabase/client";
@@ -174,6 +175,10 @@ const Settings = () => {
               <TabsTrigger value="subscription" className="data-[state=active]:bg-primary/20 data-[state=active]:text-primary">
                 <CreditCard className="w-4 h-4 mr-2" />
                 Plan
+              </TabsTrigger>
+              <TabsTrigger value="privacy" className="data-[state=active]:bg-primary/20 data-[state=active]:text-primary">
+                <ShieldCheck className="w-4 h-4 mr-2" />
+                Privacy & GA4
               </TabsTrigger>
             </TabsList>
 
@@ -504,6 +509,11 @@ const Settings = () => {
                   </div>
                 )}
               </div>
+            </TabsContent>
+
+            {/* ─── PRIVACY & GA4 TAB ─── */}
+            <TabsContent value="privacy">
+              <AnalyticsConsentManager />
             </TabsContent>
           </Tabs>
         </motion.div>

@@ -224,7 +224,7 @@ const Dashboard = () => {
           transition={{ duration: 0.6 }}
           className="relative rounded-2xl overflow-hidden h-64 sm:h-56 lg:h-64 border border-border"
         >
-          <img src={heroBanner} alt="That's A Wrap banner" className="w-full h-full object-cover opacity-50" />
+          <img src={heroBanner} alt="That's A Wrap banner" className="w-full h-full object-cover opacity-50" referrerPolicy="no-referrer" />
           <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background/90" />
           <div className="absolute inset-0 bg-gradient-to-r from-background/40 via-transparent to-background/40" />
           <div className="absolute inset-0 flex items-center justify-center px-8">

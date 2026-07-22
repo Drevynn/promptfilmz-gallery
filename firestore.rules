@@ -36,6 +36,11 @@ service cloud.firestore {
       allow read, update, delete: if false;
     }
 
+    match /contact_submissions/{submissionId} {
+      allow create: if true;
+      allow read, update, delete: if isSignedIn();
+    }
+
     // Default catch-all for remaining collections
     match /{document=**} {
       allow read, write: if isSignedIn();

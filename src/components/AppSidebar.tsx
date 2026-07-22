@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import {
   LayoutDashboard, FileText, Image, ListChecks, Film, Video, Music, Settings,
   ChevronLeft, ChevronRight, BarChart3, BookOpen, Menu, X, Clapperboard, Trophy,
-  Sun, Moon, Crown, Users,
+  Sun, Moon, Crown, Users, Mail,
 } from "lucide-react";
 import logoImg from "@/assets/logo-circle.png";
 import { useIsMobile } from "@/hooks/use-mobile";
@@ -22,8 +22,9 @@ const navItems = [
   { icon: Music, label: "AI Music", path: "/music", neon: "purple" },
   { icon: Clapperboard, label: "Director AI", path: "/director", neon: "pink" },
   { icon: Trophy, label: "Festival", path: "/festival", neon: "purple" },
-  { icon: Settings, label: "Settings", path: "/settings", neon: "pink" },
-  { icon: BookOpen, label: "Learn", path: "/learn", neon: "cyan" },
+  { icon: BookOpen, label: "Studio Wiki", path: "/wiki", neon: "cyan" },
+  { icon: Mail, label: "Contact Us", path: "/contact", neon: "pink" },
+  { icon: Settings, label: "Settings", path: "/settings", neon: "purple" },
   { icon: BarChart3, label: "Analytics Docs", path: "/analytics-docs", neon: "cyan" },
 ];
 
