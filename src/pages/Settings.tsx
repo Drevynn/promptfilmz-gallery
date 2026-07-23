@@ -490,18 +490,37 @@ const Settings = () => {
                 ) : (
                   <div className="space-y-4">
                     <p className="text-muted-foreground">You're on the free plan. Upgrade to unlock premium AI tools.</p>
-                    <div className="grid sm:grid-cols-2 gap-4">
-                      <div className="p-4 rounded-lg bg-secondary/30 border border-border space-y-3">
-                        <h3 className="font-bold text-foreground">Pro</h3>
-                        <p className="text-2xl font-bold text-foreground">{TIERS.pro.price}</p>
-                        <Button onClick={() => startCheckout(TIERS.pro.price_id)} className="w-full bg-primary hover:bg-primary/90">
+                    <div className="grid sm:grid-cols-3 gap-4">
+                      <div className="p-4 rounded-lg bg-primary/5 border border-primary/40 space-y-3 relative overflow-hidden flex flex-col justify-between">
+                        <span className="absolute top-0 right-0 bg-primary text-primary-foreground text-[10px] font-bold px-2 py-0.5 rounded-bl">
+                          Flexible
+                        </span>
+                        <div>
+                          <h3 className="font-bold text-foreground">Weekly Pass</h3>
+                          <p className="text-2xl font-bold text-primary my-1">{TIERS.weekly.price}</p>
+                          <p className="text-xs text-muted-foreground">7 days access, 100 credits/wk</p>
+                        </div>
+                        <Button onClick={() => startCheckout(TIERS.weekly.price_id)} className="w-full bg-primary hover:bg-primary/90 mt-2">
+                          Get Weekly
+                        </Button>
+                      </div>
+                      <div className="p-4 rounded-lg bg-secondary/30 border border-border space-y-3 flex flex-col justify-between">
+                        <div>
+                          <h3 className="font-bold text-foreground">Pro</h3>
+                          <p className="text-2xl font-bold text-foreground my-1">{TIERS.pro.price}</p>
+                          <p className="text-xs text-muted-foreground">300 credits/mo, scene generator</p>
+                        </div>
+                        <Button onClick={() => startCheckout(TIERS.pro.price_id)} variant="outline" className="w-full border-border mt-2">
                           Upgrade to Pro
                         </Button>
                       </div>
-                      <div className="p-4 rounded-lg bg-secondary/30 border border-border space-y-3">
-                        <h3 className="font-bold text-foreground">Studio</h3>
-                        <p className="text-2xl font-bold text-foreground">{TIERS.studio.price}</p>
-                        <Button onClick={() => startCheckout(TIERS.studio.price_id)} variant="outline" className="w-full border-border">
+                      <div className="p-4 rounded-lg bg-secondary/30 border border-border space-y-3 flex flex-col justify-between">
+                        <div>
+                          <h3 className="font-bold text-foreground">Studio</h3>
+                          <p className="text-2xl font-bold text-foreground my-1">{TIERS.studio.price}</p>
+                          <p className="text-xs text-muted-foreground">1500 credits, Director AI</p>
+                        </div>
+                        <Button onClick={() => startCheckout(TIERS.studio.price_id)} variant="outline" className="w-full border-border mt-2">
                           Upgrade to Studio
                         </Button>
                       </div>

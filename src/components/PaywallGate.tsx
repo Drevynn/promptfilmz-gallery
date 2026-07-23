@@ -11,7 +11,7 @@ interface PaywallGateProps {
   requiredTier?: TierKey[];
 }
 
-const PaywallGate = ({ children, requiredTier = ["pro", "studio"] }: PaywallGateProps) => {
+const PaywallGate = ({ children, requiredTier = ["weekly", "pro", "studio"] }: PaywallGateProps) => {
   const { subscribed, tier, loading, startCheckout } = useSubscription();
   const { isInTrial, loading: trialLoading } = useFestivalEntry();
   const [checkoutLoading, setCheckoutLoading] = useState(false);
@@ -49,30 +49,80 @@ const PaywallGate = ({ children, requiredTier = ["pro", "studio"] }: PaywallGate
       <motion.div
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
-        className="neo-card rounded-xl p-8 max-w-md text-center space-y-6"
+        className="neo-card rounded-xl p-8 max-w-lg text-center space-y-6"
       >
         <div className="w-16 h-16 mx-auto rounded-full bg-primary/10 flex items-center justify-center">
           <Lock className="w-8 h-8 text-primary" />
         </div>
-        <h2 className="font-display text-2xl font-bold">Upgrade to Unlock</h2>
-        <p className="text-muted-foreground">
-          This feature requires a paid subscription. Choose a plan to get started.
-        </p>
-        <div className="flex flex-col gap-3">
-          <Button
-            onClick={() => handleUpgrade(TIERS.pro.price_id)}
-            disabled={checkoutLoading}
-            className="bg-primary hover:bg-primary/90 shadow-[0_0_15px_var(--neon-pink-30)]"
-          >
-            {checkoutLoading ? "Redirecting…" : `Go Pro — ${TIERS.pro.price}`}
-          </Button>
-          <Button
-            onClick={() => handleUpgrade(TIERS.studio.price_id)}
-            disabled={checkoutLoading}
-            variant="outline"
-          >
-            {checkoutLoading ? "Redirecting…" : `Go Studio — ${TIERS.studio.price}`}
-          </Button>
+        <div>
+          <h2 className="font-display text-2xl font-bold">Upgrade to Unlock</h2>
+          <p className="text-sm text-muted-foreground mt-1">
+            This feature requires a paid subscription or weekly pass. Choose a plan below.
+          </p>
+        </div>
+
+        <div className="grid sm:grid-cols-3 gap-3 text-left">
+          {/* Weekly Pass */}
+          <div className="p-3.5 rounded-lg border border-primary/40 bg-primary/5 flex flex-col justify-between relative overflow-hidden">
+            <span className="absolute top-0 right-0 bg-primary text-primary-foreground text-[10px] font-bold px-2 py-0.5 rounded-bl">
+              Flexible
+            </span>
+            <div>
+              <h3 className="font-bold text-sm text-foreground">Weekly Pass</h3>
+              <p className="text-lg font-extrabold text-primary my-1">{TIERS.weekly.price}</p>
+              <p className="text-[11px] text-muted-foreground leading-tight">
+                7 days full studio access. 100 credits/wk.
+              </p>
+            </div>
+            <Button
+              onClick={() => handleUpgrade(TIERS.weekly.price_id)}
+              disabled={checkoutLoading}
+              size="sm"
+              className="w-full mt-3 bg-primary hover:bg-primary/90 text-xs font-semibold"
+            >
+              {checkoutLoading ? "..." : "Get Weekly"}
+            </Button>
+          </div>
+
+          {/* Pro Plan */}
+          <div className="p-3.5 rounded-lg border border-border bg-card flex flex-col justify-between">
+            <div>
+              <h3 className="font-bold text-sm text-foreground">Pro</h3>
+              <p className="text-lg font-extrabold text-foreground my-1">{TIERS.pro.price}</p>
+              <p className="text-[11px] text-muted-foreground leading-tight">
+                Monthly access. 300 credits/mo & scene gen.
+              </p>
+            </div>
+            <Button
+              onClick={() => handleUpgrade(TIERS.pro.price_id)}
+              disabled={checkoutLoading}
+              variant="outline"
+              size="sm"
+              className="w-full mt-3 border-border text-xs font-semibold"
+            >
+              {checkoutLoading ? "..." : "Go Pro"}
+            </Button>
+          </div>
+
+          {/* Studio Plan */}
+          <div className="p-3.5 rounded-lg border border-border bg-card flex flex-col justify-between">
+            <div>
+              <h3 className="font-bold text-sm text-foreground">Studio</h3>
+              <p className="text-lg font-extrabold text-foreground my-1">{TIERS.studio.price}</p>
+              <p className="text-[11px] text-muted-foreground leading-tight">
+                For filmmakers. 1500 credits & Director AI.
+              </p>
+            </div>
+            <Button
+              onClick={() => handleUpgrade(TIERS.studio.price_id)}
+              disabled={checkoutLoading}
+              variant="outline"
+              size="sm"
+              className="w-full mt-3 border-border text-xs font-semibold"
+            >
+              {checkoutLoading ? "..." : "Go Studio"}
+            </Button>
+          </div>
         </div>
       </motion.div>
     </div>

@@ -3,6 +3,13 @@ import { supabase } from "@/integrations/supabase/client";
 import { useAuth } from "@/contexts/AuthContext";
 
 export const TIERS = {
+  weekly: {
+    price_id: "price_weekly_999",
+    product_id: "prod_weekly_999",
+    name: "Weekly Pass",
+    price: "$9.99/wk",
+    credits_per_period: 100,
+  },
   pro: {
     price_id: "price_1TEJMZ7pm1sWSXu2cMZxcH3J",
     product_id: "prod_UCioB4YN7q42vp",

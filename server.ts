@@ -3,17 +3,17 @@ import path from "path";
 import { createServer as createViteServer } from "vite";
 import { GoogleGenAI, ThinkingLevel, Modality } from "@google/genai";
 import cors from "cors";
-import admin from 'firebase-admin';
+import { initializeApp, getApps } from "firebase-admin/app";
+import { getFirestore, Firestore } from "firebase-admin/firestore";
 
 async function startServer() {
-  let db: admin.firestore.Firestore | null = null;
+  let db: Firestore | null = null;
   try {
-    const activeApps = admin.apps || (admin as any).default?.apps || [];
-    if (!activeApps.length) {
+    if (!getApps().length) {
       const projectId = process.env.FIREBASE_PROJECT_ID || process.env.GCP_PROJECT || 'ai-studio-f92850f7-d0ea-4792-82fa-a3d132a570a3';
-      admin.initializeApp({ projectId });
+      initializeApp({ projectId });
     }
-    db = admin.firestore();
+    db = getFirestore();
   } catch (error) {
     console.error("Firebase Admin initialization failed. Server-side token validation will be bypassed in dev mode:", error);
   }

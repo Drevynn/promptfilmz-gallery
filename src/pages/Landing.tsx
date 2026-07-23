@@ -28,9 +28,11 @@ const testimonials = [
 
 
 const plans = [
-{ name: "Starter", price: "Free", features: ["1 Project", "Basic Script Editor", "5 AI Generations/mo", "No Credit Card Required"], cta: "Get Started", popular: false, priceId: null },
-{ name: "Pro", price: "$29/mo", features: ["Unlimited Projects", "All Live AI Tools", "500 AI Generations/mo", "AI Scene Generator", "Storyboard Images"], cta: "Go Pro", popular: true, priceId: "price_1TEJMZ7pm1sWSXu2cMZxcH3J" },
-{ name: "Studio", price: "$79/mo", features: ["Everything in Pro", "Unlimited AI Generations", "Director AI", "Priority Support", "Early access to Video & Music"], cta: "Go Studio", popular: false, priceId: "price_1TEJN07pm1sWSXu2GWmTPF5r" }];
+  { name: "Starter", price: "Free", features: ["1 Project", "Basic Script Editor", "5 AI Generations/mo", "No Credit Card Required"], cta: "Get Started", popular: false, priceId: null },
+  { name: "Weekly", price: "$9.99/wk", features: ["7 Days Studio Access", "100 AI Generations/wk", "AI Scene Generator", "Storyboard Images", "Cancel Anytime"], cta: "Start Weekly", popular: false, priceId: "price_weekly_999" },
+  { name: "Pro", price: "$29/mo", features: ["Unlimited Projects", "All Live AI Tools", "500 AI Generations/mo", "AI Scene Generator", "Storyboard Images"], cta: "Go Pro", popular: true, priceId: "price_1TEJMZ7pm1sWSXu2cMZxcH3J" },
+  { name: "Studio", price: "$79/mo", features: ["Everything in Pro", "Unlimited AI Generations", "Director AI", "Priority Support", "Early access to Video & Music"], cta: "Go Studio", popular: false, priceId: "price_1TEJN07pm1sWSXu2GWmTPF5r" },
+];
 
 
 const neonColors: Record<string, string> = {

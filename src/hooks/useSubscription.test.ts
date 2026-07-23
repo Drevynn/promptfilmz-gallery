@@ -90,8 +90,8 @@ describe("PaywallGate-style access check", () => {
   //   subscribed && requiredTier.includes(tier)
   const allows = (
     subscribed: boolean,
-    tier: "free" | "pro" | "studio",
-    required: Array<"pro" | "studio"> = ["pro", "studio"],
+    tier: "free" | "weekly" | "pro" | "studio",
+    required: Array<"weekly" | "pro" | "studio"> = ["weekly", "pro", "studio"],
   ) => subscribed && (required as string[]).includes(tier);
 
   it("denies access when tier is 'free' even if subscribed flag is true", () => {
