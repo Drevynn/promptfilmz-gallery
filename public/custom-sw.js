@@ -1,6 +1,6 @@
-// AIFilmz — Push notification service worker
+// Prompt Filmz — Push notification service worker
 self.addEventListener('push', (event) => {
-  let data = { title: 'AIFilmz', body: 'You have an update.' };
+  let data = { title: 'Prompt Filmz', body: 'You have an update.' };
   try {
     if (event.data) data = event.data.json();
   } catch (_) {

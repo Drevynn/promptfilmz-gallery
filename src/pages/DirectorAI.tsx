@@ -113,7 +113,7 @@ const DirectorAI = () => {
 
     const assistantId = crypto.randomUUID();
     let assistantContent = "";
-    let logEvents: DirectorLogEvent[] = [];
+    const logEvents: DirectorLogEvent[] = [];
 
     const updateAssistant = () => {
       setMessages((prev) => {

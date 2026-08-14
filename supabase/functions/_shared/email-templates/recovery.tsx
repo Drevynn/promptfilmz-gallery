@@ -17,13 +17,13 @@ interface RecoveryEmailProps {
 export const RecoveryEmail = ({ confirmationUrl }: RecoveryEmailProps) => (
   <Html lang="en" dir="ltr">
     <Head />
-    <Preview>Reset your That's A Wrap password</Preview>
+    <Preview>Reset your Prompt Filmz password</Preview>
     <Body style={main}>
       <Container style={container}>
-        <Img src={LOGO_URL} alt="That's A Wrap" style={logo} />
+        <Img src={LOGO_URL} alt="Prompt Filmz" style={logo} />
         <Heading style={h1}>Reset your password</Heading>
         <Text style={text}>
-          We received a request to reset your password for That's A Wrap.
+          We received a request to reset your password for Prompt Filmz.
           Click below to choose a new one.
         </Text>
         <Section style={buttonWrap}>

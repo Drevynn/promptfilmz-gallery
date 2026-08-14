@@ -19,13 +19,13 @@ interface EmailChangeEmailProps {
 export const EmailChangeEmail = ({ email, newEmail, confirmationUrl }: EmailChangeEmailProps) => (
   <Html lang="en" dir="ltr">
     <Head />
-    <Preview>Confirm your That's A Wrap email change</Preview>
+    <Preview>Confirm your Prompt Filmz email change</Preview>
     <Body style={main}>
       <Container style={container}>
-        <Img src={LOGO_URL} alt="That's A Wrap" style={logo} />
+        <Img src={LOGO_URL} alt="Prompt Filmz" style={logo} />
         <Heading style={h1}>Confirm email change</Heading>
         <Text style={text}>
-          You requested to change your That's A Wrap email from{' '}
+          You requested to change your Prompt Filmz email from{' '}
           <Link href={`mailto:${email}`} style={link}>{email}</Link>{' '}
           to <Link href={`mailto:${newEmail}`} style={link}>{newEmail}</Link>.
         </Text>

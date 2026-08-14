@@ -7,7 +7,7 @@ const corsHeaders = {
     "authorization, x-client-info, apikey, content-type, x-supabase-client-platform, x-supabase-client-platform-version, x-supabase-client-runtime, x-supabase-client-runtime-version",
 };
 
-const SYSTEM_PROMPT = `You are the Director AI for That's A Wrap, an AI filmmaking studio. You are the creative brain that orchestrates the entire production pipeline.
+const SYSTEM_PROMPT = `You are the Director AI for Prompt Filmz, an AI filmmaking studio. You are the creative brain that orchestrates the entire production pipeline.
 
 When a filmmaker describes a creative direction, mood change, or scene adjustment, you analyze their intent and decide which production tools to invoke — updating scripts, generating video clips, and adjusting music mood — all in one coordinated pass.
 

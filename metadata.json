@@ -1,6 +1,6 @@
 {
-  "name": "That's A Wrap — AI Filmmaking Studio",
-  "description": "AIfilmz: A complete AI-powered filmmaking workspace containing screenplay generation, director boards, casting, editing, and marketing suites.",
+  "name": "Prompt Filmz — AI Filmmaking Studio",
+  "description": "Prompt Filmz: A complete AI-powered filmmaking workspace containing screenplay generation, director boards, casting, editing, and marketing suites.",
   "requestFramePermissions": ["camera", "microphone"],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }

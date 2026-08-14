@@ -1,6 +1,6 @@
-# Database Schema Definition: That's A Wrap!
+# Database Schema Definition: Prompt Filmz
 
-The "That's A Wrap!" application currently utilizes **Google Cloud Firestore**, a NoSQL document database. This is highly suitable for the app's real-time collaboration features (like the script editor and storyboard), seamless offline support, and rapid scaling.
+The "Prompt Filmz" application currently utilizes **Google Cloud Firestore**, a NoSQL document database. This is highly suitable for the app's real-time collaboration features (like the script editor and storyboard), seamless offline support, and rapid scaling.
 
 However, as requested, below is the formal database schema definition translated into a **PostgreSQL** relational schema. This SQL definition accurately represents all the data models, relationships, and application-specific content currently managed in the application.
 
@@ -8,7 +8,7 @@ However, as requested, below is the formal database schema definition translated
 
 ```sql
 -- ==========================================
--- That's A Wrap! - PostgreSQL Schema
+-- Prompt Filmz - PostgreSQL Schema
 -- ==========================================
 
 -- Enable UUID extension

@@ -143,7 +143,7 @@ const AIMusic = () => {
         filename,
         mimeType: "audio/mpeg",
         title: track.name,
-        text: `${track.genre} · ${track.mood} · made with That's A Wrap`,
+        text: `${track.genre} · ${track.mood} · made with Prompt Filmz`,
       });
       if (result === "download") toast.success("Track downloaded");
     } catch (err: any) {

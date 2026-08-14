@@ -111,7 +111,7 @@ const ExportModal = ({ open, onOpenChange, shotId }: ExportModalProps) => {
               filename,
               mimeType: "video/mp4",
               title: filename,
-              text: "Made with That's A Wrap",
+              text: "Made with Prompt Filmz",
             });
             if (result === "native" || result === "web") toast.success("Share sheet opened");
             else toast.success("Video exported successfully!");

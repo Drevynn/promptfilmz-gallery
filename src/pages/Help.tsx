@@ -13,7 +13,7 @@ const CHAT_URL = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/helpdesk`;
 
 const Help = () => {
   const [messages, setMessages] = useState<Message[]>([
-    { role: "assistant", content: "Hi! I'm the That's A Wrap support assistant. I can answer questions about our filmmaking tools, help troubleshoot issues, or create a support ticket. How can I help?" },
+    { role: "assistant", content: "Hi! I'm the Prompt Filmz support assistant. I can answer questions about our filmmaking tools, help troubleshoot issues, or create a support ticket. How can I help?" },
   ]);
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
@@ -93,7 +93,7 @@ const Help = () => {
         <Link to="/" className="text-muted-foreground hover:text-foreground transition-colors">
           <ArrowLeft className="w-5 h-5" />
         </Link>
-        <img src={logoImg} alt="That's A Wrap" className="h-8 object-contain logo-gold-ring" />
+        <img src={logoImg} alt="Prompt Filmz" className="h-8 object-contain logo-gold-ring" />
         <div>
           <h1 className="font-display font-bold text-lg">Help Desk</h1>
           <p className="text-xs text-muted-foreground">AI-powered support</p>

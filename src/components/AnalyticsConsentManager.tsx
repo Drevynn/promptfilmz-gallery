@@ -135,7 +135,7 @@ export const AnalyticsConsentManager = ({ onSaved, compact = false }: AnalyticsC
             <span>Privacy & Cookie Preferences</span>
           </h3>
           <p className="text-xs text-muted-foreground">
-            Manage how That's A Wrap uses Google Analytics 4 (GA4) and client storage to process metrics and platform performance.
+            Manage how Prompt Filmz uses Google Analytics 4 (GA4) and client storage to process metrics and platform performance.
           </p>
         </div>
 

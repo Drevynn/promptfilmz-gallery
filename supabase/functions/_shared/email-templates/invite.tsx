@@ -18,14 +18,14 @@ interface InviteEmailProps {
 export const InviteEmail = ({ confirmationUrl }: InviteEmailProps) => (
   <Html lang="en" dir="ltr">
     <Head />
-    <Preview>You've been invited to That's A Wrap</Preview>
+    <Preview>You've been invited to Prompt Filmz</Preview>
     <Body style={main}>
       <Container style={container}>
-        <Img src={LOGO_URL} alt="That's A Wrap" style={logo} />
+        <Img src={LOGO_URL} alt="Prompt Filmz" style={logo} />
         <Heading style={h1}>You're invited ✨</Heading>
         <Text style={text}>
           You've been invited to join{' '}
-          <Link href={SITE_URL} style={link}><strong>That's A Wrap.app</strong></Link>
+          <Link href={SITE_URL} style={link}><strong>aifilmz.app</strong></Link>
           . Accept below to create your account.
         </Text>
         <Section style={buttonWrap}>

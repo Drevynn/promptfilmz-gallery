@@ -146,8 +146,8 @@ const AppSidebar = () => {
               >
                 <div className="flex items-center justify-between px-4 h-16 border-b border-border">
                   <div className="flex items-center gap-3">
-                    <img src={logoImg} alt="That's A Wrap" className="h-9 shrink-0 object-contain logo-gold-ring" />
-                    <span className="font-display font-bold text-lg text-foreground truncate">That's A Wrap</span>
+                    <img src={logoImg} alt="Prompt Filmz" className="h-9 shrink-0 object-contain logo-gold-ring" />
+                    <span className="font-display font-bold text-lg text-foreground truncate">Prompt Filmz</span>
                   </div>
                   <button onClick={() => setMobileOpen(false)} className="text-muted-foreground hover:text-foreground">
                     <X className="w-5 h-5" />
@@ -174,14 +174,14 @@ const AppSidebar = () => {
     >
       {/* Logo */}
       <div className="flex items-center gap-3 px-4 h-16 border-b border-border">
-        <img src={logoImg} alt="That's A Wrap" className={`shrink-0 object-contain logo-gold-ring ${collapsed ? 'h-9' : 'h-10'}`} />
+        <img src={logoImg} alt="Prompt Filmz" className={`shrink-0 object-contain logo-gold-ring ${collapsed ? 'h-9' : 'h-10'}`} />
         {!collapsed && (
           <motion.span
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             className="font-display font-bold text-lg text-foreground truncate"
           >
-            That's A Wrap
+            Prompt Filmz
           </motion.span>
         )}
       </div>

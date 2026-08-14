@@ -363,8 +363,8 @@ const Contact = () => {
       <header className="border-b border-border bg-background/80 backdrop-blur-xl px-6 py-4 flex items-center justify-between">
         <Link to="/" className="flex items-center gap-2 text-lg font-bold font-display text-foreground">
           <ArrowLeft className="w-5 h-5 text-muted-foreground hover:text-foreground transition-colors" />
-          <img src={logoImg} alt="That's A Wrap" className="h-8 object-contain logo-gold-ring" />
-          <span>That's A Wrap</span>
+          <img src={logoImg} alt="Prompt Filmz" className="h-8 object-contain logo-gold-ring" />
+          <span>Prompt Filmz</span>
         </Link>
         <Link to="/auth">
           <Button variant="outline" size="sm">Sign In</Button>

@@ -41,10 +41,10 @@ const Install = () => {
       >
         <div className="text-center space-y-3">
           <div className="w-20 h-20 mx-auto rounded-2xl overflow-hidden shadow-[0_0_30px_var(--gold-30)]">
-            <img src={logoImg} alt="That's A Wrap" className="w-full h-full object-cover" />
+            <img src={logoImg} alt="Prompt Filmz" className="w-full h-full object-cover" />
           </div>
           <h1 className="text-3xl font-bold font-display tracking-tight">
-            Install <span className="rainbow-text">That's A Wrap</span>
+            Install <span className="rainbow-text">Prompt Filmz</span>
           </h1>
           <p className="text-muted-foreground">
             Add to your home screen for a native app experience — works offline.
@@ -57,7 +57,7 @@ const Install = () => {
               ✓ Already installed!
             </Badge>
             <p className="text-muted-foreground text-sm mt-2">
-              Open That's A Wrap from your home screen or app launcher.
+              Open Prompt Filmz from your home screen or app launcher.
             </p>
           </div>
         ) : deferredPrompt ? (

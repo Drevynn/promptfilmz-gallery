@@ -15,8 +15,8 @@ const Terms = () => {
         <div className="max-w-6xl mx-auto flex items-center justify-between">
           <Link to="/" className="flex items-center gap-2.5 font-display text-lg font-bold text-foreground hover:opacity-90 transition-opacity">
             <ArrowLeft className="w-5 h-5 text-muted-foreground hover:text-foreground" />
-            <img src={logoImg} alt="That's A Wrap" className="h-8 object-contain logo-gold-ring" />
-            <span>That's A Wrap</span>
+            <img src={logoImg} alt="Prompt Filmz" className="h-8 object-contain logo-gold-ring" />
+            <span>Prompt Filmz</span>
           </Link>
 
           <div className="flex items-center gap-3">
@@ -47,7 +47,7 @@ const Terms = () => {
           </h1>
 
           <p className="text-sm sm:text-base text-muted-foreground max-w-2xl mx-auto">
-            Please read these Terms of Service carefully before using That's A Wrap. By accessing or using our platform, you agree to be bound by these conditions.
+            Please read these Terms of Service carefully before using Prompt Filmz. By accessing or using our platform, you agree to be bound by these conditions.
           </p>
 
           <div className="text-xs text-muted-foreground font-mono">
@@ -74,7 +74,7 @@ const Terms = () => {
               <span>Acceptance of Terms</span>
             </h2>
             <p>
-              These Terms of Service ("Terms") constitute a legally binding agreement between you ("User", "Director", or "you") and That's A Wrap (<strong className="text-foreground">aifilmz.app</strong>, "we", "us", or "our").
+              These Terms of Service ("Terms") constitute a legally binding agreement between you ("User", "Director", or "you") and Prompt Filmz (<strong className="text-foreground">aifilmz.app</strong>, "we", "us", or "our").
             </p>
             <p>
               By signing up for an account, purchasing credit packages, generating content, or utilizing any studio tools (including Script Editor, Director AI, Character Bible, Storyboard, AI Studio Video Generator, AI Music, Timeline Editor, and Golden Hour Indie Fest), you confirm that you have read, understood, and agree to these Terms. If you do not agree, you must immediately discontinue use of the platform.
@@ -89,7 +89,7 @@ const Terms = () => {
             </h2>
             <ul className="list-disc pl-6 space-y-2">
               <li>
-                <strong className="text-foreground">Minimum Age Requirement:</strong> You must be at least 13 years old to use That's A Wrap. If you are between 13 and 18 years old, you must review these Terms with a parent or legal guardian.
+                <strong className="text-foreground">Minimum Age Requirement:</strong> You must be at least 13 years old to use Prompt Filmz. If you are between 13 and 18 years old, you must review these Terms with a parent or legal guardian.
               </li>
               <li>
                 <strong className="text-foreground">Account Accuracy:</strong> You agree to provide accurate, complete information when creating an account via Google OAuth or email sign-in.
@@ -107,7 +107,7 @@ const Terms = () => {
               <span>Credits, Billing & Subscription Terms</span>
             </h2>
             <p>
-              That's A Wrap operates on a credit-based compute system for AI generation tasks:
+              Prompt Filmz operates on a credit-based compute system for AI generation tasks:
             </p>
             <div className="p-4 rounded-xl bg-card border border-border space-y-2 text-xs">
               <h4 className="font-semibold text-foreground flex items-center gap-1.5">
@@ -138,10 +138,10 @@ const Terms = () => {
             </h2>
             <ul className="list-disc pl-6 space-y-2">
               <li>
-                <strong className="text-foreground">Your Content Rights:</strong> You retain full ownership, commercial rights, and copyright to all scripts, screenplays, character concepts, custom prompts, and final assembled MP4 films created using That's A Wrap.
+                <strong className="text-foreground">Your Content Rights:</strong> You retain full ownership, commercial rights, and copyright to all scripts, screenplays, character concepts, custom prompts, and final assembled MP4 films created using Prompt Filmz.
               </li>
               <li>
-                <strong className="text-foreground">Platform License:</strong> By generating content, you grant That's A Wrap a limited, non-exclusive, worldwide license solely to process, render, host, and store your media assets to operate the studio application.
+                <strong className="text-foreground">Platform License:</strong> By generating content, you grant Prompt Filmz a limited, non-exclusive, worldwide license solely to process, render, host, and store your media assets to operate the studio application.
               </li>
               <li>
                 <strong className="text-foreground">Golden Hour Indie Fest Submissions:</strong> If you voluntarily submit a shot or project to the Golden Hour Indie Fest (/festival), you grant us permission to display the submission in the public festival gallery for community viewing and voting.
@@ -155,7 +155,7 @@ const Terms = () => {
               <span className="text-primary font-mono">5.</span>
               <span>Acceptable Use & Community Guidelines</span>
             </h2>
-            <p>You agree NOT to use That's A Wrap to:</p>
+            <p>You agree NOT to use Prompt Filmz to:</p>
             <ul className="list-disc pl-6 space-y-1.5">
               <li>Generate illegal content, child sexual abuse material (CSAM), or content violating minor safety.</li>
               <li>Create non-consensual sexually explicit deepfakes, hate speech, or content promoting violence against protected groups.</li>
@@ -197,7 +197,7 @@ const Terms = () => {
               <span>Limitation of Liability & Termination</span>
             </h2>
             <p>
-              To the maximum extent permitted by applicable law, That's A Wrap and its operators shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising from your use of the studio platform or temporary service outages.
+              To the maximum extent permitted by applicable law, Prompt Filmz and its operators shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising from your use of the studio platform or temporary service outages.
             </p>
             <p>
               We reserve the right to suspend or terminate accounts that violate these Terms or engage in fraudulent activity.
@@ -227,7 +227,7 @@ const Terms = () => {
           <Link to="/contact" className="hover:text-foreground transition-colors">Contact Support</Link>
           <Link to="/faq" className="hover:text-foreground transition-colors">FAQ</Link>
         </div>
-        <p>© 2026 That's A Wrap. All rights reserved.</p>
+        <p>© 2026 Prompt Filmz. All rights reserved.</p>
       </footer>
     </div>
   );

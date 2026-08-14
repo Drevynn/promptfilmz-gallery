@@ -280,7 +280,7 @@ const Landing = () => {
       <nav className="fixed top-0 w-full z-50 border-b border-border/30 bg-background/60 backdrop-blur-2xl">
         <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
           <Link to="/" className="flex items-center gap-2 text-xl font-bold font-display text-foreground hover:opacity-90 transition-opacity">
-            <span>That's A Wrap</span>
+            <span>Prompt Filmz</span>
           </Link>
           <div className="hidden md:flex items-center gap-8 text-sm text-muted-foreground">
             {navLinks.map((link) =>
@@ -627,8 +627,8 @@ const Landing = () => {
       <footer className="border-t border-border py-12 px-6">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="flex items-center gap-2">
-            <img src={logoImg} alt="That's A Wrap" className="h-8 object-contain logo-gold-ring" referrerPolicy="no-referrer" />
-            <span className="font-display font-semibold text-sm">That's A Wrap</span>
+            <img src={logoImg} alt="Prompt Filmz" className="h-8 object-contain logo-gold-ring" referrerPolicy="no-referrer" />
+            <span className="font-display font-semibold text-sm">Prompt Filmz</span>
           </div>
           <div className="flex items-center gap-6 text-sm text-muted-foreground">
             <Link to="/wiki" className="hover:text-foreground transition-colors">Wiki</Link>
@@ -637,7 +637,7 @@ const Landing = () => {
             <Link to="/help" className="hover:text-foreground transition-colors">Help</Link>
             <Link to="/install" className="hover:text-foreground transition-colors text-gold-shimmer">Install App</Link>
           </div>
-          <p className="text-xs text-muted-foreground">© 2026 That's A Wrap. All rights reserved.</p>
+          <p className="text-xs text-muted-foreground">© 2026 Prompt Filmz. All rights reserved.</p>
         </div>
       </footer>
     </div>);

@@ -51,7 +51,7 @@ export const wikiGuides: ToolGuide[] = [
       "Unified credit wallet across all tools"
     ],
     content: [
-      "**Welcome to That's A Wrap** — the all-in-one AI-native filmmaking studio designed for directors, screenwriters, and digital visual storytellers.",
+      "**Welcome to Prompt Filmz** — the all-in-one AI-native filmmaking studio designed for directors, screenwriters, and digital visual storytellers.",
       "**Standard Production Pipeline:**",
       "**1. Create a Project** — Head to your Dashboard and click **+ New Project**. This sets up your production workspace.",
       "**2. Write Your Script** — In the **Script Editor** (/script), outline scene sluglines or let AI generate scene continuations and dialogue.",
@@ -291,7 +291,7 @@ export const wikiGuides: ToolGuide[] = [
       "Live Director Leaderboard"
     ],
     content: [
-      "The **Golden Hour Indie Fest** (/festival) is the built-in community film competition inside That's A Wrap.",
+      "The **Golden Hour Indie Fest** (/festival) is the built-in community film competition inside Prompt Filmz.",
       "**Submission Steps:**",
       "1. In the Video Editor or Export modal, pick any rendered shot or video clip.",
       "2. Toggle **Submit to Golden Hour Indie Fest**.",
@@ -313,7 +313,7 @@ export const wikiGuides: ToolGuide[] = [
       "Detailed usage transaction history in Settings"
     ],
     content: [
-      "That's A Wrap operates on a straightforward **Credit System** so you only pay for the AI compute you use.",
+      "Prompt Filmz operates on a straightforward **Credit System** so you only pay for the AI compute you use.",
       "**Credit Cost Reference Table:**",
       "• **Storyboard Frame Generation** — 2 credits / image",
       "• **AI Music Soundtrack Generation** — 3 credits / track",
@@ -405,7 +405,7 @@ const Learn = () => {
             <div className="space-y-3 max-w-2xl">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-xs font-semibold text-primary">
                 <BookOpen className="w-3.5 h-3.5" />
-                <span>That's A Wrap Studio Wiki</span>
+                <span>Prompt Filmz Studio Wiki</span>
               </div>
               <h1 className="font-display text-2xl sm:text-4xl font-bold text-foreground tracking-tight">
                 Complete Tool & Feature Guide

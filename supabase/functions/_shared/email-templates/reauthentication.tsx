@@ -16,10 +16,10 @@ interface ReauthenticationEmailProps {
 export const ReauthenticationEmail = ({ token }: ReauthenticationEmailProps) => (
   <Html lang="en" dir="ltr">
     <Head />
-    <Preview>Your That's A Wrap verification code</Preview>
+    <Preview>Your Prompt Filmz verification code</Preview>
     <Body style={main}>
       <Container style={container}>
-        <Img src={LOGO_URL} alt="That's A Wrap" style={logo} />
+        <Img src={LOGO_URL} alt="Prompt Filmz" style={logo} />
         <Heading style={h1}>Verification code</Heading>
         <Text style={text}>Use this code to confirm your identity:</Text>
         <Text style={codeStyle}>{token}</Text>

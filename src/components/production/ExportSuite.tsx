@@ -155,7 +155,7 @@ export const ExportSuite = ({
           <div class="flex justify-between items-end border-t" style="border-color: ${isDark ? "#334155" : "#e2e8f0"}; pt-12; font-size: 10pt; opacity: 0.75;">
             <div>
               <p style="margin: 0; font-weight: 500;">Draft Date: ${draftDate}</p>
-              <p style="margin: 3px 0 0 0;">Created using That's A Wrap</p>
+              <p style="margin: 3px 0 0 0;">Created using Prompt Filmz</p>
             </div>
             <div style="text-align: right; max-width: 250px;">
               <p style="margin: 0; font-style: italic; line-height: 1.4;">${contactInfo}</p>
@@ -279,7 +279,7 @@ export const ExportSuite = ({
       <!DOCTYPE html>
       <html>
         <head>
-          <title>${projectTitle || "That's A Wrap — Production Export"}</title>
+          <title>${projectTitle || "Prompt Filmz — Production Export"}</title>
           ${fontInclusions}
           <script src="https://cdn.tailwindcss.com"></script>
           <style>

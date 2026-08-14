@@ -1,8 +1,8 @@
-// Shared brand styles for That's A Wrap transactional emails
+// Shared brand styles for Prompt Filmz transactional emails
 export const LOGO_URL =
   'https://broeyaqgxkaqfjxjgrnw.supabase.co/storage/v1/object/public/email-assets/aifilmz-logo.png'
 export const SITE_URL = 'https://aifilmz.app'
-export const BRAND_NAME = 'That's A Wrap'
+export const BRAND_NAME = 'Prompt Filmz'
 
 export const main = {
   backgroundColor: '#0A0A0A',

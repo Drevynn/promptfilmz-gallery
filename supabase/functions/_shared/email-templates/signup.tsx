@@ -19,14 +19,14 @@ interface SignupEmailProps {
 export const SignupEmail = ({ recipient, confirmationUrl }: SignupEmailProps) => (
   <Html lang="en" dir="ltr">
     <Head />
-    <Preview>Welcome to That's A Wrap — confirm your email</Preview>
+    <Preview>Welcome to Prompt Filmz — confirm your email</Preview>
     <Body style={main}>
       <Container style={container}>
-        <Img src={LOGO_URL} alt="That's A Wrap" style={logo} />
-        <Heading style={h1}>Welcome to That's A Wrap ✨</Heading>
+        <Img src={LOGO_URL} alt="Prompt Filmz" style={logo} />
+        <Heading style={h1}>Welcome to Prompt Filmz ✨</Heading>
         <Text style={text}>
           Thanks for joining{' '}
-          <Link href={SITE_URL} style={link}><strong>That's A Wrap.app</strong></Link>
+          <Link href={SITE_URL} style={link}><strong>aifilmz.app</strong></Link>
           {' '}— your AI-native film studio.
         </Text>
         <Text style={text}>

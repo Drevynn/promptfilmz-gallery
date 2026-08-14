@@ -108,10 +108,10 @@ const PWAInstallBanner = () => {
             {!showIOSGuide ? (
               <div className="flex items-center gap-4 p-4">
                 <div className="shrink-0 w-12 h-12 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center">
-                  <img src={logoImg} alt="That's A Wrap" className="w-8 h-8 rounded-lg" />
+                  <img src={logoImg} alt="Prompt Filmz" className="w-8 h-8 rounded-lg" />
                 </div>
                 <div className="flex-1 min-w-0">
-                  <p className="text-sm font-semibold text-foreground truncate">That's A Wrap</p>
+                  <p className="text-sm font-semibold text-foreground truncate">Prompt Filmz</p>
                   <p className="text-xs text-muted-foreground">Install for the best experience</p>
                 </div>
                 <button

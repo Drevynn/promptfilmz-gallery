@@ -13,7 +13,7 @@ const ChatWidget = () => {
   const location = useLocation();
   const [open, setOpen] = useState(false);
   const [messages, setMessages] = useState<Message[]>([
-    { role: "assistant", content: "Hi! Need help? Ask me anything about That's A Wrap." },
+    { role: "assistant", content: "Hi! Need help? Ask me anything about Prompt Filmz." },
   ]);
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
@@ -117,7 +117,7 @@ const ChatWidget = () => {
             <div className="px-4 py-3 border-b border-border flex items-center justify-between bg-card">
               <div className="flex items-center gap-2">
                 <Bot className="w-5 h-5 text-primary" />
-                <span className="font-display font-semibold text-sm">That's A Wrap Support</span>
+                <span className="font-display font-semibold text-sm">Prompt Filmz Support</span>
               </div>
               <button onClick={() => setOpen(false)} className="text-muted-foreground hover:text-foreground">
                 <X className="w-4 h-4" />

@@ -1,6 +1,6 @@
-# That's A Wrap — Core Codebase Usage Guide
+# Prompt Filmz — Core Codebase Usage Guide
 
-This guide provides practical code examples demonstrating how to import and utilize the core functionalities of the **That's A Wrap** filmmaking environment in frontend applications, dashboards, or developer integrations.
+This guide provides practical code examples demonstrating how to import and utilize the core functionalities of the **Prompt Filmz** filmmaking environment in frontend applications, dashboards, or developer integrations.
 
 ---
 

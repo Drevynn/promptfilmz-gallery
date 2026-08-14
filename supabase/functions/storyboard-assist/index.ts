@@ -7,7 +7,7 @@ const corsHeaders = {
     "authorization, x-client-info, apikey, content-type, x-supabase-client-platform, x-supabase-client-platform-version, x-supabase-client-runtime, x-supabase-client-runtime-version",
 };
 
-const SYSTEM_PROMPT = `You are a professional storyboard assistant for That's A Wrap, an AI filmmaking studio. You generate detailed scene descriptions for storyboard frames.
+const SYSTEM_PROMPT = `You are a professional storyboard assistant for Prompt Filmz, an AI filmmaking studio. You generate detailed scene descriptions for storyboard frames.
 
 When given a prompt (a scene description, mood, or concept), generate storyboard frames as structured JSON using the provided tool.
 

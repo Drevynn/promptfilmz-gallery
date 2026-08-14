@@ -20,8 +20,8 @@ const Privacy = () => {
         <div className="max-w-6xl mx-auto flex items-center justify-between">
           <Link to="/" className="flex items-center gap-2.5 font-display text-lg font-bold text-foreground hover:opacity-90 transition-opacity">
             <ArrowLeft className="w-5 h-5 text-muted-foreground hover:text-foreground" />
-            <img src={logoImg} alt="That's A Wrap" className="h-8 object-contain logo-gold-ring" />
-            <span>That's A Wrap</span>
+            <img src={logoImg} alt="Prompt Filmz" className="h-8 object-contain logo-gold-ring" />
+            <span>Prompt Filmz</span>
           </Link>
 
           <div className="flex items-center gap-3">
@@ -129,7 +129,7 @@ const Privacy = () => {
                   <span>Overview & Scope</span>
                 </h2>
                 <p>
-                  That's A Wrap (<strong className="text-foreground">aifilmz.app</strong>, "we", "us", or "our") is an AI-native filmmaking studio platform. This Privacy Policy governs the collection, storage, processing, and protection of personal data when you use our website, application tools, APIs, and associated services.
+                  Prompt Filmz (<strong className="text-foreground">aifilmz.app</strong>, "we", "us", or "our") is an AI-native filmmaking studio platform. This Privacy Policy governs the collection, storage, processing, and protection of personal data when you use our website, application tools, APIs, and associated services.
                 </p>
                 <p>
                   By creating an account or interacting with our tools (including Script Editor, Director AI, Character Bible, Storyboards, AI Studio Video Generator, and AI Music), you acknowledge the data handling practices described in this policy.
@@ -265,7 +265,7 @@ const Privacy = () => {
           <Link to="/contact" className="hover:text-foreground transition-colors">Contact Support</Link>
           <Link to="/faq" className="hover:text-foreground transition-colors">FAQ</Link>
         </div>
-        <p>© 2026 That's A Wrap. All rights reserved.</p>
+        <p>© 2026 Prompt Filmz. All rights reserved.</p>
       </footer>
     </div>
   );

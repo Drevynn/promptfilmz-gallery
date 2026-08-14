@@ -17,13 +17,13 @@ interface MagicLinkEmailProps {
 export const MagicLinkEmail = ({ confirmationUrl }: MagicLinkEmailProps) => (
   <Html lang="en" dir="ltr">
     <Head />
-    <Preview>Your login link for That's A Wrap</Preview>
+    <Preview>Your login link for Prompt Filmz</Preview>
     <Body style={main}>
       <Container style={container}>
-        <Img src={LOGO_URL} alt="That's A Wrap" style={logo} />
+        <Img src={LOGO_URL} alt="Prompt Filmz" style={logo} />
         <Heading style={h1}>Your login link</Heading>
         <Text style={text}>
-          Tap the button below to log in to That's A Wrap. This link expires shortly.
+          Tap the button below to log in to Prompt Filmz. This link expires shortly.
         </Text>
         <Section style={buttonWrap}>
           <Button style={button} href={confirmationUrl}>Log In →</Button>

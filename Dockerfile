@@ -1,4 +1,4 @@
-# Dockerfile for That's A Wrap
+# Dockerfile for Prompt Filmz
 FROM node:20-alpine AS builder
 
 WORKDIR /app

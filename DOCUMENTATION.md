@@ -1,6 +1,6 @@
-# That's A Wrap — Core Codebase Documentation
+# Prompt Filmz — Core Codebase Documentation
 
-This document covers the structural design, core functions, hooks, state engines, and context providers for the **That's A Wrap — AI Filmmaking Studio** workspace. It provides definitions of parameters, return properties, and intended behaviors to support developers building upon and importing services from this codebase.
+This document covers the structural design, core functions, hooks, state engines, and context providers for the **Prompt Filmz — AI Filmmaking Studio** workspace. It provides definitions of parameters, return properties, and intended behaviors to support developers building upon and importing services from this codebase.
 
 ---
 
